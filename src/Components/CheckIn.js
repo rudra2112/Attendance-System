@@ -32,6 +32,7 @@ const CheckIn = ({ studentsData, setStudentsData }) => {
         flag = 1;
         return true;
       }
+      return false;
     });
 
     if (flag === 1) {

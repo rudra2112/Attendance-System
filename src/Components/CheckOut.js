@@ -25,9 +25,12 @@ const CheckOut = ({
         if (student.checkOutTime !== "-") {
           alert("Student already checked out");
           flag = 1;
-          return true;
         }
+        return true;
       }
+      alert("Student not checked in");
+      flag = 1;
+      return false;
     });
 
     if (flag === 1) {
@@ -42,7 +45,9 @@ const CheckOut = ({
       if (student.studentId === ID) {
         student.checkOutTime = Time;
         setStudentsData([...studentsData]);
+        return true;
       }
+      return false;
     });
     setCheckInCount(checkInCount - 2);
     e.target.reset();
@@ -85,6 +90,7 @@ const CheckOut = ({
                   </tr>
                 );
               }
+              return null;
             })}
           </tbody>
         </table>
