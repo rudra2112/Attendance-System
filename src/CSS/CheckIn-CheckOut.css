@@ -1,0 +1,33 @@
+.Heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    padding: 1vh 1vw;
+}
+
+form {
+    padding: 1.5vh 1vw;
+    text-align: center;
+}
+
+label {
+    font-size: 24px;
+    padding: 1vh 1vw;
+}
+
+input {
+    font-size: 16px;
+    margin: 1vh 1vw;
+    padding: 1vh 0.5vw;
+    border-radius: 5px;
+    border: 0.5px rgb(189, 189, 189) solid;
+}
+
+button {
+    background-color: rgb(29, 152, 84);
+    font-size: 16px;
+    margin: 1.5vh 1vw;
+    padding: 1vh 1vw;
+    color: white;
+    border: 0.5px rgb(189, 189, 189) solid;
+    border-radius: 5px;
+}

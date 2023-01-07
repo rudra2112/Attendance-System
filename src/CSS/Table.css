@@ -1,0 +1,22 @@
+.Table-Container {
+    overflow-y: auto;
+    height: 40vh;
+    margin: 2vh 2vw;
+    width: 95%;
+    text-align: center;
+}
+
+.Table-Container thead th {
+    position: sticky;
+    top: 0;
+    background-color: rgb(29, 152, 84);
+    color: white;
+}
+
+.Table {
+    width: 100%;
+}
+
+td {
+    border: 0.5px rgb(189, 189, 189) solid;
+}
