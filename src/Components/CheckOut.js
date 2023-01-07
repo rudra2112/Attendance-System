@@ -19,8 +19,11 @@ const CheckOut = ({
 
     e.preventDefault();
     var ID = e.target.ID.value;
+
+    e.target.reset();
+
     var flag = 0;
-    studentsData.find((student) => {
+    var flag2 = studentsData.find((student) => {
       if (student.studentId === ID) {
         if (student.checkOutTime !== "-") {
           alert("Student already checked out");
@@ -28,10 +31,13 @@ const CheckOut = ({
         }
         return true;
       }
-      alert("Student not checked in");
-      flag = 1;
       return false;
     });
+
+    if(flag2 === undefined){
+      alert("Student didn't check in");
+      return;
+    }
 
     if (flag === 1) {
       return;
@@ -50,7 +56,6 @@ const CheckOut = ({
       return false;
     });
     setCheckInCount(checkInCount - 2);
-    e.target.reset();
   };
 
   return (

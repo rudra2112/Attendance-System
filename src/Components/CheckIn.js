@@ -5,7 +5,7 @@ import "../CSS/Table.css";
 const CheckIn = ({ studentsData, setStudentsData }) => {
   /* CheckIn component is used to display the form to check in a student to campus
   and add the student to the database */
-
+  
   const submitHandler = (e) => {
     /* This function is used to handle the submit event of the form
     It checks if the student is already checked in or not
@@ -15,9 +15,12 @@ const CheckIn = ({ studentsData, setStudentsData }) => {
     var ID = e.target.ID.value;
     var Name = e.target.Name.value;
     var Time =
-      new Date().toLocaleDateString("en-IN", {}) +
-      " " +
-      new Date().toLocaleTimeString("en-IN", {});
+    new Date().toLocaleDateString("en-IN", {}) +
+    " " +
+    new Date().toLocaleTimeString("en-IN", {});
+    
+    e.target.reset();
+
     var newStudent = {
       studentId: ID,
       studentName: Name,
@@ -40,7 +43,6 @@ const CheckIn = ({ studentsData, setStudentsData }) => {
     }
 
     setStudentsData([...studentsData, newStudent]);
-    e.target.reset();
   };
 
   return (
